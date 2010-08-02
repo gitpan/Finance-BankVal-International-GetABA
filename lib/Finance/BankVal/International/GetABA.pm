@@ -11,7 +11,7 @@ use JSON;
 require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(getABA new);
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $format;		#response return format i.e. xml json csv
 my $aba;      		#the ABA to be validated
@@ -251,6 +251,19 @@ None by default.
 &getABA is exported on request i.e. "use Finance::BankVal::International::GetABA qw(&getABA);"
 or to use OO just "use Finance::BankVal::International::GetABA;"
 
+
+=head1 DEPENDENCIES
+
+LWP::UserAgent => 5.835
+XML::Simple => 2.18
+JSON => 2.21
+
+Crypt::SSLeay => 0.57
+
+Crypt::SSLeay is required by LWP::UserAgent to make use of SSL you may need to install this manually
+try:
+ sudo aptitude install libssl-dev (might not be neccessary and can be removed after install)
+ sudo cpan -i Crypt::SSLeay
 
 =head1 SEE ALSO
 
