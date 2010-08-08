@@ -11,7 +11,7 @@ use JSON;
 require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(getABA new);
-our $VERSION = '0.04';
+our $VERSION = '0.02';
 
 my $format;		#response return format i.e. xml json csv
 my $aba;      		#the ABA to be validated
